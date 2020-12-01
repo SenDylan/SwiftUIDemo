@@ -18,7 +18,7 @@ struct LandmarkList: View {
                 Toggle(isOn: $userData.showFavoritesOnly) {
                     Text("Favorites only")
                 }
-            
+             
             ForEach(userData.landmarks) {
                 landmark in
                 if !self.userData.showFavoritesOnly || landmark.isFavorite {
@@ -28,7 +28,6 @@ struct LandmarkList: View {
                     }
                 }
             }
-            
             .navigationBarTitle(Text("Landmarks"))
     }
 }
